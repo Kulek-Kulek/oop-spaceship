@@ -4,6 +4,7 @@ export class Missile {
         this.y = y;
         this.container = container;
         this.element = document.createElement('div');
+        this.interval = null;
     }
 
     init() {
@@ -12,8 +13,13 @@ export class Missile {
         this.element.style.left = `${this.x + this.element.offsetWidth / 1.5}px`;
         this.element.style.top = `${this.y - this.element.offsetHeight / 2}px`;
 
-        setInterval(() => {
+        this.interval = setInterval(() => {
             this.element.style.top = `${this.element.offsetTop - 1}px`;
         }), 5
+    }
+
+    remove() {
+        clearInterval(this.interval);
+        this.element.remove();
     }
 }

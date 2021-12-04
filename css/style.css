@@ -82,7 +82,7 @@ body {
   height: var(--size-unit);
   background-image: url('../images/ship.png');
   -webkit-animation: move-8-units-X var(--ships-animation-time) steps(8) infinite;
-          animation: move-8-units-X var(--ships-animation-time) steps(8) infinite;
+  animation: move-8-units-X var(--ships-animation-time) steps(8) infinite;
   left: 0;
   position: fixed;
 }
