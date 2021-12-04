@@ -12,12 +12,12 @@ export class Spaceship {
     }
 
     init() {
-        this.#setPosition();
+        this.setPosition();
         this.#eventListeners();
         this.#gameLoop();
     }
 
-    #setPosition() {
+    setPosition() {
         this.element.style.bottom = '0';
         this.element.style.left = `${window.innerWidth / 2 - this.#getPosition()}px`
     }
@@ -36,7 +36,7 @@ export class Spaceship {
                     this.#leftArrow = true;
                     break;
                 case 39:
-                    this.#rightArrow = true; s
+                    this.#rightArrow = true;
                     break;
             }
         });
